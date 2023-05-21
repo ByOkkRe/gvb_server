@@ -15,6 +15,6 @@ func main() {
 	global.DB = core.Gorm()
 
 	router := router.InitRouter()
-
+	global.Log.Infof("系统运行在[%s]", global.Config.System.Addr())
 	router.Run(global.Config.System.Addr())
 }

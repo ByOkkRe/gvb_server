@@ -1,17 +1,15 @@
 package router
 
 import (
-	"net/http"
+	"gvb_server/global"
 
 	"github.com/gin-gonic/gin"
 )
 
 func InitRouter() *gin.Engine {
+	gin.SetMode(global.Config.System.Env)
 	router := gin.Default()
-	router.GET("", func(ctx *gin.Context) {
-		ctx.JSON(http.StatusOK, gin.H{
-			"sucess": true,
-		})
-	})
+	apiGroup := ApiGroup{}
+	apiGroup.InitApiRouterGroup(router)
 	return router
 }
