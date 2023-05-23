@@ -1,8 +1,11 @@
 package models
 
-import "gvb_server/models/ctype"
+import (
+	"gvb_server/models/ctype"
+)
 
 type UserModel struct {
+	// gorm.Model 带逻辑删除
 	MODEL
 	NickName       string           `json:"nick_name" gorm:"size:36"`                                                         //昵称
 	UserName       string           `json:"user_name" gorm:"size:36"`                                                         //用户名
