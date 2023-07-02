@@ -1,5 +1,6 @@
 package models
 
+// 菜单banner表
 type MenuBannerModel struct {
 	MenuID      uint        `json:"menu_id"`
 	MenuModel   MenuModel   `gorm:"foreignkey:MenuID"`

@@ -1,5 +1,6 @@
 package models
 
+// 用户反馈表
 type FadeBackModel struct {
 	MODEL
 	Email        string `json:"email" gorm:"size:64"`

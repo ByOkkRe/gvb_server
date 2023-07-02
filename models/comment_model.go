@@ -1,5 +1,6 @@
 package models
 
+// 评论表
 type CommentModel struct {
 	MODEL
 	SubComment         []*CommentModel `json:"sub_comment" gorm:"foreignkey:ParentCommentID"`   //子评论列表
