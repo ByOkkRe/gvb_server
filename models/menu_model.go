@@ -2,7 +2,7 @@ package models
 
 import "gvb_server/models/ctype"
 
-//菜单
+//菜单表
 type MenuModel struct {
 	MODEL
 	MenuTitle    string        `json:"menu_title" gorm:"size:32"`
